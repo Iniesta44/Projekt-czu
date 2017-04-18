@@ -1,0 +1,242 @@
+
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="nastaveni">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="zobrazeni">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="jas">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:byte" name="value"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="rozliseni"/>
+              <xs:element name="adaptivni_jas">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="enabled"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="nocni_rezim">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="enabled"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="velikost_pisma"/>
+              <xs:element type="xs:string" name="kvalita_efektů"/>
+              <xs:element type="xs:string" name="kvalita_shaderů"/>
+              <xs:element type="xs:string" name="kvalita_textur"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:byte" name="hodiny"/>
+              <xs:element type="xs:byte" name="minuty"/>
+              <xs:element type="xs:byte" name="vteriny"/>
+              <xs:element type="xs:byte" name="casove_pasmo"/>
+              <xs:element name="automaticky_letni_cas">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="enabled"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="datum">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:short" name="rok"/>
+              <xs:element type="xs:byte" name="mesic"/>
+              <xs:element type="xs:byte" name="den"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ovladani">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="ovladač"/>
+              <xs:element name="citlivost_mysi">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:byte" name="osa_x"/>
+                    <xs:element name="invertovat_mys">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="horizontal"/>
+                            <xs:attribute type="xs:string" name="vertical"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:byte" name="osa_y"/>
+                    <xs:element type="xs:byte" name="zrychleni"/>
+                    <xs:element type="xs:byte" name="posun_radku_pri_pouziti_kolecka"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="klavesove_zkratky">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="krok_zpet"/>
+                    <xs:element type="xs:string" name="krok_vpred"/>
+                    <xs:element type="xs:string" name="snizit_jas"/>
+                    <xs:element type="xs:string" name="zvysit_jas"/>
+                    <xs:element type="xs:string" name="prepinac_ticheho_rezimu"/>
+                    <xs:element type="xs:string" name="hotovo"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="zvuk">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:byte" name="hlasitost_zvuku"/>
+              <xs:element name="notifikacni_upozorneni">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="enabled"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="tichy_rezim">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="enabled"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="zvuk_do_sluchatek">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="enabled"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="zvuk_z_reproduktoru">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="enabled"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="zvuk_z_laptopu">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="enabled"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="prostorový_zvuk">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="enabled"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="jazyk">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="lang"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="titulky">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="lang"/>
+                <xs:attribute type="xs:string" name="enabled"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ukladani">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="pridat_ucet_onedrive"/>
+              <xs:element type="xs:string" name="pridat_ucet_googledrive"/>
+              <xs:element type="xs:string" name="pridat_ucet_dropbox"/>
+              <xs:element type="xs:string" name="pridat_ucet_amazonclouddrive"/>
+              <xs:element name="automaticke_ukladani">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="enabled"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="multiplayer">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:short" name="port"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="konzole">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="console"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="verze_aplikace">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="version"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

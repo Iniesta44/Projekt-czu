@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Dokumentace - aplikace</title>
+	</head>
+	<body>
+		<header>
+			<h1>Dokumentace - aplikace</h1>
+		</header>
+
+		<nav id="menu">
+			<h2>Obsah</h2>
+			<ul>
+				<li><a href="#menu">Obsah s odkazy</a></li>
+				<li><a href="#uvod">Úvod</a></li>
+				<li><a href="#metodika">Metodika</a></li>
+				<li><a href="#elementy">Popis elementů a atributů</a></li>
+				<li><a href="#transformace">Popis transformace</a></li>
+				<li><a href="#zaver">Závěr</a></li>
+				<li><a href="#zapati">Zápatí</a></li>
+			</ul>
+		</nav>
+
+		<main>
+			<article>
+				<section id="uvod">
+					<h2>Úvod</h2>
+					<p>
+						V této práci na předmět Značkovací jazyky se zabývám tvorbou XML dokumentu, XSD schéma, XSL transformace do JSON a dokumentací. Téma tohoto projektu jsem si vybral nastavení fiktivní aplikace.
+					</p>
+				</section>
+
+				<section id="metodika">
+					<h2>Metodika</h2>
+					<p>Tento projekt vznikal v programu Sublime Text. Nejprve jsem vytvořil XML dokument. Tento dokument vznikal tak, že jsem vymýšlel elementy a atributy, do kterých by má fiktivní aplikace ukládala informace. Ten jsem dále pomocí stránky <a href="http://www.freeformatter.com/xsd-generator.html">Freeformater</a> s nastavením Russian Doll překonvertoval do XSD souboru. Dalším souborem, který jsem vytvořil je XSL transformace do JSON. Soubor XSL jsem upravoval pomocí online nástroje <a href="http://www.freeformatter.com/xsl-transformer.html">Freeformatter</a>. Nejprve jsem vložil kód XML souboru a po té začal postupně vytvářet XSL soubor. Po spuštění nástroje se vygenerovala JSON kód.</p>
+				</section>
+
+				<section id="elementy">
+					<h2>Popis elementů a atributů</h2>
+
+					<table border="1">
+						<tr>
+							<th>Název elementu či atributu</th>
+							<th>Stručný popis</th>
+						</tr>
+						<tr>
+							<td>zobrazeni</td>
+							<td>Element, který obsahuje základní obrazové nastavení aplikace.</td>
+						</tr>
+						<tr>
+							<td>jas</td>
+							<td>Potomek elementu zobrazeni, který obsahuje informaci o výši jasu.</td>
+						</tr>
+						<tr>
+							<td>value</td>
+							<td>Atribut elementu jas, který udává výši jasu.</td>
+						</tr>
+						<tr>
+							<td>rozliseni</td>
+							<td>Potomek elementu zobrazeni, který obsahuje informaci o použitém rozlišení.</td>
+						</tr>
+						<tr>
+							<td>adaptivni_jas</td>
+							<td>Potomek elementu zobrazeni, který říká zda je použitý adaptivní jas.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu adaptivni_jas, který říká, zda je aktivní funkce adaptivni jas.</td>
+						</tr>
+						<tr>
+							<td>nocni_rezim</td>
+							<td>Potomek elementu zobrazeni, který říká zda je zapnutý noční režim.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu nocni_rezim, který říká, zda je aktivní fuknce noční režim.</td>
+						</tr>
+						<tr>
+							<td>velikost_pisma</td>
+							<td>Potomek elementu zobrazeni, který nese informaci o velikosti písma.</td>
+						</tr>
+						<tr>
+							<td>kvalita_efektu</td>
+							<td>Potomek elementu zobrazeni, který nese informaci o úrovni nastavených efektů.</td>
+						</tr>
+						<tr>
+							<td>kvalita_shaderu</td>
+							<td>Potomek elementu zobrazeni, který nese informaci o úrovni nastavených shaderů.</td>
+						</tr>
+						<tr>
+							<td>kvalita_textur</td>
+							<td>Potomek elementu zobrazeni, který nese informaci o úrovni nastavených textur.</td>
+						</tr>
+						<tr>
+							<td>cas</td>
+							<td>Element, který obsahuje informace o čase.</td>
+						</tr>
+						<tr>
+							<td>hodiny</td>
+							<td>Potomek elementu cas, který vyjadřuje nastavenou hodinu v aplikaci.</td>
+						</tr>
+						<tr>
+							<td>minuty</td>
+							<td>Potomek elementu cas, který vyjadřuje nastavené minuty v aplikaci.</td>
+						</tr>
+						<tr>
+							<td>vteriny</td>
+							<td>Potomek elementu cas, který vyjadřuje nastavené vteřiny v aplikaci.</td>
+						</tr>
+						<tr>
+							<td>casove_pasmo</td>
+							<td>Potomek elementu cas, který uvádí časové pásmo.</td>
+						</tr>
+						<tr>
+							<td>automaticky_letni_cas</td>
+							<td>Potomek elementu cas, který dovolí aplikaci automaticky nastavovat letní čas.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu automaticky_letni_cas, který má funkci na zapnutí automatického letního času.</td>
+						</tr>
+						<tr>
+							<td>datum</td>
+							<td>Element, který obsahuje informace o aktuálním datumu v aplikaci.</td>
+						</tr>
+						<tr>
+							<td>rok</td>
+							<td>Potomek elementu datum, který obsahuje informaci o nastaveném roce.</td>
+						</tr>
+						<tr>
+							<td>mesic</td>
+							<td>Potomek elementu datum, který obsahuje informaci o nastaveném roce.</td>
+						</tr>
+						<tr>
+							<td>den</td>
+							<td>Potomek elementu datum, který obsahuje informaci o nastaveném roce.</td>
+						</tr>
+						<tr>
+							<td>ovladani</td>
+							<td>Element, který obsahuje informace o základním nastavení jednotlivých ovladačů aplikace.</td>
+						</tr>
+						<tr>
+							<td>ovladac</td>
+							<td>Potomek elementu ovladani, který určuje použitý ovladač.</td>
+						</tr>
+						<tr>
+							<td>citlivost_mysi</td>
+							<td>Potomek elementu ovladani, který obsahuje informace o základním nastavení myši.</td>
+						</tr>
+						<tr>
+							<td>osa_x</td>
+							<td>Potomek elementu citlivost_mysi, který nastavuje citlivost myši v ose x.</td>
+						</tr>
+						<tr>
+							<td>invertovat_mys</td>
+							<td>Potomek elementu citlivost_mysi, který umožňuje invertovat myš v ose x a y.</td>
+						</tr>
+						<tr>
+							<td>vertical</td>
+							<td>Atribut elementu invertovat_mys, který nese informaci o nastavení invertování pohybu myši ve vertikálním směru.</td>
+						</tr>
+						<tr>
+							<td>horizontal</td>
+							<td>Atribut elementu invertovat_mys, který nese informaci o nastavení invertování pohybu myši v horizontálním směru.</td>
+						</tr>
+						<tr>
+							<td>osa_y</td>
+							<td>Potomek elementu citlivost_mysi, který nastavuje citlivost myši v ose y.</td>
+						</tr>
+						<tr>
+							<td>zrychleni</td>
+							<td>Potomek elementu citlivost_mysi, který nastavuje zrychlení myši.</td>
+						</tr>
+						<tr>
+							<td>posun_radku_pri_pouziti_kolecka</td>
+							<td>Potomek elementu citlivost_mysi, který nastavuje posun o počet řádků při použití kolečka myši.</td>
+						</tr>
+						<tr>
+							<td>klavesove_zkratky</td>
+							<td>Potomek elementu ovladani, který nese informace o klávesových zkratkách pro aplikaci.</td>
+						</tr>
+						<tr>
+							<td>krok_zpet</td>
+							<td>Potomek elementu klavesove_zkratky, který nastavuje tlačítko na klávesnici pro krok zpět.</td>
+						</tr>
+						<tr>
+							<td>krok_vpred</td>
+							<td>Potomek elementu klavesove_zkratky, který nastavuje tlačítko na klávesnici pro krok vpřed.</td>
+						</tr>
+						<tr>
+							<td>snizit_jas</td>
+							<td>Potomek elementu klavesove_zkratky, který nastavuje tlačítko na klávesnici pro snížení jasu.</td>
+						</tr>
+						<tr>
+							<td>zvysit_jas</td>
+							<td>Potomek elementu klavesove_zkratky, který nastavuje tlačítko na klávesnici pro zvýšení jasu.</td>
+						</tr>
+						<tr>
+							<td>prepinac_ticheho_rezimu</td>
+							<td>Potomek elementu klavesove_zkratky, který nastavuje tlačítko na klávesnici pro zapnutí/vypnutí tichého režimu.</td>
+						</tr>
+						<tr>
+							<td>hotovo</td>
+							<td>Potomek elementu klavesove_zkratky, který nastavuje tlačítko na klávesnici pro krok, který uloží nastavení.</td>
+						</tr>
+						<tr>
+							<td>zvuk</td>
+							<td>Element, který nese informace o nastavení jednotlivých složek zvuku.</td>
+						</tr>
+						<tr>
+							<td>hlasitost_zvuku</td>
+							<td>Potomek elementu zvuk, který nastavuje hlasitost zvuku.</td>
+						</tr>
+						<tr>
+							<td>notifikacni_upozorneni</td>
+							<td>Potomek elementu zvuk, který dovoluje zvukově upozorňovat na nové notifikace.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu notifikacni_upozorneni, který zapne/vypne zvukové upozornění na nové notifikace.</td>
+						</tr>
+						<tr>
+							<td>tichy_rezim</td>
+							<td>Potomek elementu zvuk, který dovoluje aplikaci zapnutí tichého režimu.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu tichy_rezim, který přepíná tichý režim na zapnuto/vypnuto.</td>
+						</tr>
+						<tr>
+							<td>zvuk_do_sluchatek</td>
+							<td>Potomek elementu zvuk, který dovoluje aplikaci zapnutí zvuku do sluchátek.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu zvuk_do_sluchatek, který přepíná možnost výstupu zvuku do sluchátek.</td>
+						</tr>
+						<tr>
+							<td>zvuk_z_reproduktoru</td>
+							<td>Potomek elementu zvuk, který dovoluje aplikaci zapnutí zvuku do reproduktorů.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu zvuk_z_reproduktoru, který přepíná možnost výstupu zvuku do reproduktorů.</td>
+						</tr>
+						<tr>
+							<td>zvuk_z_laptopu</td>
+							<td>Potomek elementu zvuk, který dovoluje aplikaci zapnutí zvuku z laptopu.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu zvuk_z_laptopu, který přepíná možnost výstupu zvuku z laptopu.</td>
+						</tr>
+						<tr>
+							<td>prostorovy_zvuk</td>
+							<td>Potomek elementu zvuk, který dovoluje aplikaci zapnutí prostorového zvuku.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu prostorovy_zvuk, který přepíná možnost prostorového zvuku.</td>
+						</tr>
+						<tr>
+							<td>jazyk</td>
+							<td>Element, který nese informaci o nastavené lokalizaci aplikace.</td>
+						</tr>
+						<tr>
+							<td>lang</td>
+							<td>Atribut elementu jazyk, který umožňuje nastavit jazyk v aplikaci.</td>
+						</tr>
+						<tr>
+							<td>titulky</td>
+							<td>Element, který nese informaci o nastavených titulkách v aplikaci.</td>
+						</tr>
+						<tr>
+							<td>lang</td>
+							<td>Atribut elementu titulky, který umožňuje nastavit jazyk titulků v aplikaci.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu titulky, který umožňuje zapnout/vypnout titulky v aplikaci.</td>
+						</tr>
+						<tr>
+							<td>ukladani</td>
+							<td>Element, který nese informace o zvoleném cloudovém úložišti pro ukládání dat z aplikace.</td>
+						</tr>
+						<tr>
+							<td>pridat_ucet_onedrive</td>
+							<td>Potomek elementu ukladani, který umožňuje přidat email cloudového úložiště onedrive.</td>
+						</tr>
+						<tr>
+							<td>pridat_ucet_googledrive</td>
+							<td>Potomek elementu ukladani, který umožňuje přidat email cloudového úložiště googledrive.</td>
+						</tr>
+						<tr>
+							<td>pridat_ucet_dropbox</td>
+							<td>Potomek elementu ukladani, který umožňuje přidat email cloudového úložiště dropbox.</td>
+						</tr>
+						<tr>
+							<td>pridat_ucet_amazonclouddrive</td>
+							<td>Potomek elementu ukladani, který umožňuje přidat email cloudového úložiště amazonclouddrive.</td>
+						</tr>
+						<tr>
+							<td>automaticke_ukladani</td>
+							<td>Potomek elementu ukladani, který nese informaci o zapnutí/vypnutí automatického ukládání.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu automaticke_ukladani, který umožňuje zapnutí/vypnutí automatického ukládání dat z aplikace.</td>
+						</tr>
+						<tr>
+							<td>multiplayer</td>
+							<td>Element, který nese informaci o portu.</td>
+						</tr>
+						<tr>
+							<td>port</td>
+							<td>Atribut elementu multiplayer, který dovoluje přenastavení čísla portu.</td>
+						</tr>
+						<tr>
+							<td>konzole</td>
+							<td>Element, který nese informaci o zapnutí/vypnutí konzole.</td>
+						</tr>
+						<tr>
+							<td>console</td>
+							<td>Atribut elementu konzole, který dovoluje zapnutí/vypnutí konzole v aplikaci.</td>
+						</tr>
+						<tr>
+							<td>verze_aplikace</td>
+							<td>Element, který nese informaci o aktuální verzi aplikace.</td>
+						</tr>
+						<tr>
+							<td>version</td>
+							<td>Atribut elementu verze_aplikace, který nese informaci o zapnutí/vypnutí automatického ukládání.</td>
+						</tr>
+					</table>
+				</section>
+
+				<section id="transformace">
+					<h2>Popis transformace</h2>
+					<h3>JSON transformace</h3>
+					<p>Nejprve bych chtěl zmínit, že pro transformaci do JSON jsem použil online nástroj <a href="http://www.freeformatter.com/xsl-transformer.html">Freeformatter</a>. Po té, co jsem vložil XML kód z mého projektu, musel jsem do dalšího okna začít psát transformaci XSL. Výsledkem byl JSON kód.</p>
+				</section>
+
+				<section id="zaver">
+					<h2>Závěr</h2>
+					<p>Tato semestrální práce je pro mne velkým přínosem, naučil jsem se spousty nových věcí. Nejtěžší částí této práce byla transformace do JSON.</p>
+				</section>
+			</article>
+		</main>
+
+		<footer id="zapati">
+			<hr>
+			<table>
+				<tr>
+					<td><a target="_blank" href="https://github.com/Iniesta44/Nastavení-aplikace">Github repozitář k této semestrální práci</a></td>
+				</tr>
+				<tr>
+					<td>Patrik Houštecký</td>
+				</tr>
+			</table>
+		</footer>
+	</body>
+</html>

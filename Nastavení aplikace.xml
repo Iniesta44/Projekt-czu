@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nastaveni>
+	<zobrazeni>
+		<jas value="100" />
+		<rozliseni>1080p</rozliseni>
+		<adaptivni_jas enabled="true" />
+		<nocni_rezim enabled="false" />
+		<velikost_pisma>Střední</velikost_pisma>
+		<kvalita_efektu>Vysoká</kvalita_efektu>
+		<kvalita_shaderu>Vysoká</kvalita_shaderu>
+		<kvalita_textur>Vysoká</kvalita_textur>
+	</zobrazeni>
+	<cas>
+		<hodiny>16</hodiny>
+		<minuty>20</minuty>
+		<vteriny>36</vteriny>
+		<casove_pasmo>+1</casove_pasmo>
+		<automaticky_letni_cas enabled="true" />
+	</cas>
+	<datum>
+		<rok>2017</rok>
+		<mesic>4</mesic>
+		<den>16</den>
+	</datum>
+	<ovladani>
+		<ovladac>myš+klávesnice</ovladac>
+		<citlivost_mysi>
+			<osa_x>5</osa_x>
+			<invertovat_mys horizontal="false" vertical="false" />
+			<osa_y>5</osa_y>
+			<zrychleni>10</zrychleni>
+			<posun_radku_pri_pouziti_kolecka>5</posun_radku_pri_pouziti_kolecka>
+		</citlivost_mysi>
+		<klavesove_zkratky>
+			<krok_zpet>PgDn</krok_zpet>
+			<krok_vpred>PgUp</krok_vpred>
+			<snizit_jas>NUM2</snizit_jas>
+			<zvysit_jas>NUM8</zvysit_jas>
+			<prepinac_ticheho_rezimu>NUM5</prepinac_ticheho_rezimu>
+			<hotovo>Enter</hotovo>
+		</klavesove_zkratky>
+	</ovladani>
+	<zvuk>
+		<hlasitost_zvuku>100</hlasitost_zvuku>
+		<notifikacni_upozorneni enabled="true" />
+		<tichy_rezim enabled="false" />
+		<zvuk_do_sluchatek enabled="false" />
+		<zvuk_z_reproduktoru enabled="true" />
+		<zvuk_z_laptopu enabled="false" />
+		<prostorovy_zvuk enabled="true" />
+	</zvuk>
+	<jazyk lang="Čeština" />
+	<titulky lang="Čeština" enabled="true" />
+	<ukladani>
+		<pridat_ucet_onedrive>xxx123yyy@gmail.com</pridat_ucet_onedrive>
+		<pridat_ucet_googledrive>none</pridat_ucet_googledrive>
+		<pridat_ucet_dropbox>none</pridat_ucet_dropbox>
+		<pridat_ucet_amazonclouddrive>none</pridat_ucet_amazonclouddrive>
+		<automaticke_ukladani enabled="true" />
+	</ukladani>
+	<multiplayer port="5000" />
+	<konzole console="false" />
+	<verze_aplikace version="beta2.0" />
+</nastaveni>
